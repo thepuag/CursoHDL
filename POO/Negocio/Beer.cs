@@ -1,8 +1,9 @@
 ﻿
 namespace POO.Negocio
 {
-    internal class Beer
+    internal class Beer : Bebida
     {
+        private const string Categoria = "Cerveza";
         private int _stock;
         private decimal _alcohol;
         public string Nombre { get; set; }
@@ -26,7 +27,7 @@ namespace POO.Negocio
             set => _stock = value < 0 ? 10 : value;
         }
 
-        public Beer(string nombre, decimal precio, decimal alcohol, int stock)
+        public Beer(string nombre, decimal precio, decimal alcohol, int stock, int cantidad) : base(cantidad)
         {
             Nombre = nombre;
             Precio = precio;
@@ -43,6 +44,11 @@ namespace POO.Negocio
         {
             return number + " => " + GetInfo();
 
+        }
+
+        public override string GetCategoria()
+        {
+            return Categoria;
         }
     }
 }
