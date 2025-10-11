@@ -1,7 +1,7 @@
 ﻿
 namespace POO.Negocio
 {
-    internal class Beer : Bebida
+    public class Beer : Bebida, IVendible, IEnviable
     {
         private const string Categoria = "Cerveza";
         private int _stock;
@@ -50,5 +50,14 @@ namespace POO.Negocio
         {
             return Categoria;
         }
+
+        public void Enviar() => Console.WriteLine("Enviando >>" + GetInfo());
+
+        public decimal GetPrecio()
+        {
+            Console.WriteLine("Hago esto antes");
+            return Precio;            
+        }
+               
     }
 }

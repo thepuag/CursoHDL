@@ -1,7 +1,7 @@
 ﻿
 namespace POO.Negocio
 {
-    internal class ExpiracionBeer : Beer
+    public class ExpiracionBeer : Beer
     {
          
         public DateTime FechaExpiracion {  get; set; }
