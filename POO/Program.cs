@@ -16,6 +16,8 @@ IVendible[] cositas = new IVendible[]
 
 };
 
+Beer basica = new Beer("Ipa", 3, 4.2M,120,1);
+
 VenderMuchos(cositas);
 
 ExpiracionBeer coronita = new ExpiracionBeer("Coronita", 4, 3.2m, 8, new DateTime(2026, 1, 1), 300);
@@ -41,4 +43,21 @@ void VenderMuchos(IVendible[] elementos)
         }
     }
 }
+// Pruebas de statics
+Console.WriteLine("---- EJERCICIO STATICS ----");
+Console.WriteLine(Beer.CantidadDeObjetos);
+
+Console.WriteLine($"Probando la multiplicacion de metodo static > {OperacionesAuxiliares.Multiplicacion(2,3)}");
+
+// Colecciones
+Console.WriteLine("---- EJERCICIO COLECCIONES ----");
+
+var pipas = new Elementos<int>(4);
+
+pipas.Add(121);
+pipas.Add(345);
+pipas.Add(1212131);
+pipas.Add(0000);
+
+pipas.Get();
 

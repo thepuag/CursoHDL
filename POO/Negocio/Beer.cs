@@ -8,6 +8,7 @@ namespace POO.Negocio
         private decimal _alcohol;
         public string Nombre { get; set; }
         public decimal Precio { get; set; }
+        public static int CantidadDeObjetos;
         public decimal Alcohol
         {
             get { return _alcohol; }
@@ -33,6 +34,7 @@ namespace POO.Negocio
             Precio = precio;
             Alcohol = alcohol;
             Stock = stock;
+            CantidadDeObjetos++;
         }
 
         public virtual string GetInfo()
